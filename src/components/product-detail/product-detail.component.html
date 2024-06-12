@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-secondary mb-3" (click)="goBack()">Back to List</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <img [src]="product.urls.regular" class="img-fluid" alt="{{product.alt_description}}">
+        </div>
+        <div class="col-md-6">
+            <h2>{{ product.user.name }}</h2>
+            <p>{{ product.description || 'No description available' }}</p>
+            <p><strong>Category:</strong> {{ product.category || 'N/A' }}</p>
+            <p><strong>User Reviews:</strong> {{ product.reviews || 'No reviews available' }}</p>
+            <p><strong>Price:</strong> {{ product.price || 'Not available' }}</p>
+        </div>
+    </div>
+</div>

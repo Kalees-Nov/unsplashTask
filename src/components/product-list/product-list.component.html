@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" class="form-control" placeholder="Search products" (input)="filterProducts($event)">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-4" *ngFor="let product of filteredProducts">
+            <div class="card mb-4">
+                <img [src]="product.urls.small" class="card-img-top" alt="{{product.alt_description}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.user.name }}</h5>
+                    <p class="card-text">{{ product.description || 'No description available' }}</p>
+                    <button class="btn btn-primary" (click)="viewProduct(product.id)">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
